@@ -6,14 +6,14 @@ const app = express();
 const flightRoutes = require("./routes/flightAgent")
 const errorHandler = require("./middleware/errorHandler")
 
-const network = "base-sepolia";
+const network = "solana";
 const PORT = process.env.PORT || 8000;
-const facilitatorObj = { url: "https://x402.org/facilitator" };
+const facilitatorObj = { url: "https://facilitator.payai.network" };
 
 
 app.use(
   paymentMiddleware(
-    "0xe6e8aEE83b272ad56CB3090391674472Fe089382", 
+    "6cNGSrsCjbuMfHgryZPGQn8UwApsikYgqwV98F8jCvpr", 
         {
       // Protected endpoint for authentication
       "POST /x402/ai/flight-agent": {
