@@ -16,12 +16,14 @@ app.use(
     "0xe6e8aEE83b272ad56CB3090391674472Fe089382", 
         {
       // Protected endpoint for authentication
-      "POST /x402/ai": {
+      "POST /x402/ai/flight-agent": {
         scheme: "exact",
         price: "$0.02",
         network: network,
 
       },
+
+
 
 
     },
