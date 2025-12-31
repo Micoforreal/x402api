@@ -38,6 +38,15 @@ app.use(express.json())
 
 app.use("/x402/ai", flightRoutes)
 
+app.get("/.well-known/x402-verification.json", async(req, res)=>{
+
+  res.json({
+
+    "x402": "23996ad3f4a2" 
+  
+  })
+})
+
 app.use(errorHandler)
 
 
