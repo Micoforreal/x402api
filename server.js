@@ -12,7 +12,7 @@ app.use(express.json())
 
 
 
-// app.use(agentx402)
+app.use(agentx402)
 
 // app.use(flightPayment)
 
