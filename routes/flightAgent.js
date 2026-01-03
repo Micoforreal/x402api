@@ -1,7 +1,10 @@
 const router = require("express").Router()
-const controller = require("../controllers/flightAgent.controller")
+const runAgent = require("../controllers/flightAgent.controller")
 const validateInput = require("../middleware/validateInput")
+const payment = require("../controllers/flightPayment.controller")
+router.post("/flight-agent", validateInput,  runAgent.runAgent)
 
-router.post("/flight-agent", validateInput, controller.runAgent)
+router.post("/flight-payment",payment.Payment)
+
 
 module.exports = router

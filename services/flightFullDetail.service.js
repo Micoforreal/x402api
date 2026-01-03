@@ -1,6 +1,7 @@
 const duffel = require("../config/duffel")
 
-module.exports = async function getDetails(offerId){
+
+async function getOfferDetails(offerId){
     const response = await duffel.offers.get(offerId)
     
     // Extract the offer data from the response structure
@@ -38,3 +39,13 @@ module.exports = async function getDetails(offerId){
         }
     }
 }
+
+
+async function getOrderDetails(orderId){
+    const response = await duffel.orders.get(orderId)
+
+    // console.log(response.data)
+    return response.data
+}
+
+module.exports = { getOfferDetails, getOrderDetails };

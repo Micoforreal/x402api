@@ -37,6 +37,7 @@ export default [
     },
     rules: {
       ...ts.configs.recommended.rules,
+      "no-console": "error",
       "import/first": "error",
       "prettier/prettier": "error",
       "@typescript-eslint/member-ordering": "error",

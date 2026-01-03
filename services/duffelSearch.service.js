@@ -1,11 +1,16 @@
-const duffel = require("../config/duffel")
+const duffel = require("../config/duffel");
+const resolveLocation = require("./resolveLocation");
 
 module.exports = async function searchFlights(input) {
+
+  const origin = await resolveLocation(input.origin);
+  const destination = await resolveLocation(input.destination)
+
   const offerRequest = await duffel.offerRequests.create({
     slices: [
       {
-        origin: input.origin,
-        destination: input.destination,
+        origin: origin,
+        destination: destination,
         departure_date: input.departure_date
       }
     ],
