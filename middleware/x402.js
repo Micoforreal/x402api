@@ -12,6 +12,7 @@ const agentx402 = paymentMiddleware(
             scheme: "exact",
             price: "$0.02",
             network: network,
+        
             asset:"EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
 
         },
