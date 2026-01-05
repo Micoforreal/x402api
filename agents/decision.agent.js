@@ -30,7 +30,7 @@ RULES:
 - NO text outside JSON
 
 Your task:
-- Choose the best flight offer based on user preferences
+- Choose the best and cheapest flight offer based on user preferences
 
 Output schema:
 {

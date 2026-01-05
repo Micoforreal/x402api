@@ -2,7 +2,7 @@ const { paymentMiddleware } = require('x402-express');
 const { getOrderDetails } = require('../services/flightFullDetail.service');
 
 const facilitatorObj = { url: "https://facilitator.payai.network" };
-const network = "solana-devnet";
+const network = "solana";
 const address = "6cNGSrsCjbuMfHgryZPGQn8UwApsikYgqwV98F8jCvpr";
 const agentx402 = paymentMiddleware(
     address,
@@ -12,10 +12,13 @@ const agentx402 = paymentMiddleware(
             scheme: "exact",
             price: "$0.02",
             network: network,
+            asset:"EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
 
         },
+        
 
     },
+    
     facilitatorObj,
 
 
